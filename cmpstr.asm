@@ -43,7 +43,7 @@ back2: mov ah,01h          ;int to accept character
        cmp al,len2
        jnz last
        mov cl,len1
-       cld
+       cld                  ;clear direction flag 
  repe cmpsb
  jnz last
  display msg3
