@@ -21,7 +21,7 @@ display msg1
 mov si,00h
 back1: mov ah,01h  ;int to accept character
        int 21h
-       cmp al,0dh
+       cmp al,0dh           ;ASCII for Enter key
        JZ next1
        mov str1[si],al
        inc si
