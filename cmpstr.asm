@@ -19,7 +19,7 @@ mov ds,ax
 mov es,ax
 display msg1
 mov si,00h
-back1: mov ah,01h
+back1: mov ah,01h  ;int to accept character
        int 21h
        cmp al,0dh
        JZ next1
@@ -29,7 +29,7 @@ back1: mov ah,01h
        jmp back1
 next1: mov si,00h
        display msg2
-back2: mov ah,01h
+back2: mov ah,01h          ;int to accept character
        int 21h
        cmp al,0dh
        JZ next2
